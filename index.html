@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Масаж у Києві — професійний масажист</title>
+    <meta name="description" content="Професійний масаж у Києві на Троєщині. Зняття болю, напруги та стресу. Прийом за попереднім записом.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #2f8f83;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        header p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #2f8f83;
+            padding: 14px 26px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        section {
+            padding: 30px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .services, .benefits, .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .price {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+        .about img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background: #f4f4f4;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+        }
+        .about-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+        align-items: center;
+        }
+
+        .about-photo img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-text h3 {
+            margin: 0 0 5px;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            color: #2f8f83;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .education ul {
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .education li {
+            margin-bottom: 8px;
+        }
+
+        .mission {
+            font-size: 16px;
+            font-style: italic;
+            background: #f4f9f8;
+            padding: 10px 15px;
+            border-left: 4px solid #2f8f83;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 800px) {
+            .about-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .education ul {
+                text-align: left;
+            }
+        }
+        .review-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px 25px;
+        background: #ffffff;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .review-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .review-date {
+            font-size: 14px;
+            color: #777;
+            margin: 2px 0 0;
+        }
+
+        .review-stars {
+            color: #f5b301;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .more-reviews {
+        text-align: center;
+        margin-top: 40px;
+        }
+
+        .more-reviews-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            background: #2f8f83;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .more-reviews-btn:hover {
+            background: #26776d;
+        }
+        .contact-section {
+        background: linear-gradient(135deg, #2f8f83, #4fb6a8);
+        color: #ffffff;
+        border-radius: 16px;
+        padding: 60px 20px;
+        margin-top: 60px;
+        }
+
+        .contact-section h2 {
+            color: #ffffff;
+        }
+
+        .contact-subtitle {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            color: #333;
+            padding: 30px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #2f8f83;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .contact-btn.secondary {
+            background: #4fb6a8;
+        }
+
+        .contact-note {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 16px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .contact-section {
+                border-radius: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Професійний масаж у Києві на Троєщині</h1>
+    <p>Допомагаю зняти біль, напругу та стрес. Прийом за попереднім записом.</p>
+    <a href="#contact" class="btn">Записатися на масаж</a>
+</header>
+
+<section>
+    <h2>Послуги</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Класичний масаж</h3>
+            <p>Знімає м’язову напругу, покращує кровообіг та загальне самопочуття.</p>
+            <p class="price">60 хв — 1190 грн</p>
+        </div>
+        <div class="card">
+            <h3>Лікувальний масаж</h3>
+            <p>Робота з болем у спині, шиї, попереку.</p>
+            <p class="price">60 хв — 1190 грн</p>
+        </div>
+        <div class="card">
+            <h3>Релакс-масаж</h3>
+            <p>Глибоке розслаблення та відновлення після стресу.</p>
+            <p class="price">60 хв — 900 грн</p>
+        </div>
+        <div class="card">
+            <h3>Мануальний масаж</h3>
+            <p>Діагностики та усунення болю, відновлення рухливості, нормалізації тонусу та загального оздоровлення.</p>
+            <p class="price">Від 30 хв — від 600 грн</p>
+        </div>
+        <div class="card">
+            <h3>Сегментарний масаж</h3>
+            <p>Відновлює роботу м'язів та суглобів.
+            Нормалізує роботу внутрішніх органів та ендокринної системи.
+            Покращує кровопостачання.</p>
+            <p class="price">Від 30 хв — від 600 грн</p>
+        </div>
+        <div class="card">
+            <h3>Дитячий масаж (від 10 років)</h3>
+            <p>При різних захворюваннях окрім дисплазії.</p>
+            <p class="price">Від 30 хв — від 500 грн</p>
+        </div>
+        
+    </div>
+</section>
+
+<section>
+    <h2>Чому обирають мене</h2>
+    <div class="benefits">
+        <div class="card">Досвід роботи понад 23 роки</div>
+        <div class="card">Індивідуальний підхід до кожного клієнта</div>
+        <div class="card">Прийом лише за записом — без черг</div>
+    </div>
+</section>
+
+<section>
+    <h2>Про спеціаліста</h2>
+
+    <div class="about-card">
+        <div class="about-photo">
+            <img src="/photos/evhen.webp" alt="Сиворонов Євген Ігорович — масажист">
+        </div>
+
+        <div class="about-text">
+            <h3>Сиворонов Євген Ігорович</h3>
+            <p class="subtitle">Сертифікований масажист, стаж роботи 23+ роки</p>
+
+            <div class="education">
+                <p><strong>Освіта:</strong></p>
+                <ul>
+                    <li>Київський медичний коледж — лікувальна справа (фельдшер)</li>
+                    <li>Інститут нетрадиційної медицини — лікувальний масаж та мануальна терапія (1991 р.)</li>
+                </ul>
+            </div>
+
+            <p class="mission">
+                Моя мета — допомогти вам відчути реальне полегшення вже після перших сеансів та покращити якість життя.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Відгуки клієнтів</h2>
+    <div class="review-card">
+    <div class="review-header">
+        <div>
+            <p class="review-name">Ірина</p>
+            <p class="review-date">03.07.2025</p>
+        </div>
+        <div class="review-stars">★★★★★</div>
+    </div>
+
+    <p class="review-text">
+        Якщо ви хочете отримати якісний та професійний масаж, то вам потрібен саме цей фахівець.
+        Я дуже вдячна Євгену Ігоровичу за те, що завдяки масажу я позбулася головного болю,
+        та покращився мій загальний стан. Дякую Вам! Рекомендую!
+    </p>
+    </div>
+    <div class="review-card">
+    <div class="review-header">
+        <div>
+            <p class="review-name">Тетяна</p>
+            <p class="review-date">03.11.2024</p>
+        </div>
+        <div class="review-stars">★★★★★</div>
+    </div>
+
+    <p class="review-text">
+        Пройшла сеанси лікувального масажу у Євгена Ігоровича. 
+        У лікаря золоті руки. Він дуже кваліфіковано та професійно робить свою роботу. 
+        Вже після декількох сеансів мені стало краще, зникла біль в спині, в зоні шиї та плечей, відчуття постійної втоми та головний біль. 
+        Задоволена ставленням та якістю обслуговування. Дякую Вам! Рекомендую всім!
+    </p>
+    </div>
+    <div class="review-card">
+    <div class="review-header">
+        <div>
+            <p class="review-name">Марина</p>
+            <p class="review-date">16.01.2024</p>
+        </div>
+        <div class="review-stars">★★★★★</div>
+    </div>
+    <p class="review-text">
+        Лікар надав консультацію, провів сеанс, з проблемою, з якою я зверталася, лікар вирішив
+    </p>
+    </div>
+    <div class="more-reviews">
+    <a 
+        href="https://drive.google.com/drive/folders/16GB61IErJ8aOsP_mjMvrcCAjG_ueywXZ?usp=sharing"
+        target="_blank"
+        rel="noopener"
+        class="more-reviews-btn"
+    >
+        Більше відгуків
+    </a>
+</div>
+
+
+
+
+
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Запис на масаж</h2>
+
+    <p class="contact-subtitle">
+        Залиште заявку або напишіть у зручний для вас месенджер —
+        я відповім та підберу оптимальний час для запису.
+    </p>
+
+    <div class="contact-cards">
+        <div class="contact-card">
+            <h3>Зателефонувати</h3>
+            <p class="contact-info">+38 (066) 404-47-24 Telegram / Viber</p>
+            <a href="tel:+380664044724" class="contact-btn">Подзвонити</a>
+        </div>
+    </div>
+
+    <p class="contact-note">
+        Прийом лише за попереднім записом
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Масаж у Києві</p>
+</footer>
+
+</body>
+</html>
